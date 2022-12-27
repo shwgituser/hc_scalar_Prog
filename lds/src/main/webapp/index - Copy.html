@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+
+<html>
+<head>
+	<title>DS Menu Driven Application</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+</head>
+<style type="text/css">
+*{
+	margin: 0;
+	padding: 0;
+}
+body{
+	background: #eee;
+	font-size: 16px;
+	font-family: sans-serif,arial;
+}
+ 
+.nav{
+	width: 1100px;
+	height: 60px;
+	margin: 0 auto;
+	border-radius: 5px;
+	
+}
+ul li{
+	list-style: none;
+	width: 200px;
+	line-height: 60px;
+	position: relative;
+	background: #222;
+	box-shadow: 0px 2px 5px 0px grey;
+	text-align: center;
+	float: left;
+	background-color: #010000;
+}
+ul li ul{
+	position: absolute;
+}
+.nav > ul > li:nth-of-type(1){
+	border-radius: 5px 0px 0px 5px;
+}
+.nav > ul > li:nth-of-type(5){
+	border-radius: 0px 5px 5px 0px;
+}
+ul li a{
+	color: #fff;
+	width: 200px;
+	height: 58px;
+	display: inline-block;
+	text-decoration: none;
+}
+ul li a:hover{
+	font-weight: bold;
+	border-bottom: 2px solid #fff;
+}
+ul li ul{
+	display: none;
+}
+.nav ul li:hover ul{
+	display: block;
+}
+.fa{
+	margin-right: 5px;
+}
+.container{
+	width: 1000px;
+	height: 200px;
+	margin: 0 auto;
+	padding:20px 20px;
+}
+@media screen and (max-width: 480px){
+	header{
+		width: 100%;
+	}
+	.nav{
+		display: none;
+		width: 100%;
+		height: auto;
+	}
+	ul li{
+		width: 100%;
+		float: none;
+	}
+	ul li a{
+		width: 100%;
+		display: block;
+	}
+	ul li ul{
+		position: static;
+	}
+	ul li ul li a{
+		background: #222;
+	}
+	.fa-list.modify{
+		display: block;
+	}
+	.container{
+		width: 100%;
+		height: auto;
+	}
+	body{
+		overflow-x:hidden;
+	}
+}
+</style>
+<div class="menu"></div>
+<nav class="nav">
+	<ul>
+		<li><a href="#">DATA STRUCTURES</a></li>
+		<li><a href="#">STACK</a>
+			<ul>
+				<li><a href="#" onClick="menu()" id="menu_down">PUSH</a></li>
+				<li><a href="#">POP</a></li>
+				<li><a href="#">PEAK</a></li>
+			</ul>
+		</li>
+		<li><a href="#">QUEUE</a>
+		<ul>
+                <li><a href="#" onClick="menu()">ENQUEUE</a></li>
+				<li><a href="#">DEQUEUE</a></li>
+				<li><a href="#">PEAK</a></li>
+			</ul>
+		</li>
+		<li><a href="#">ARRAY</a>
+		<ul>
+                <li><a href="#" onClick="menu()">INSERT</a></li>
+				<li><a href="#">DISPLAY</a></li>
+				<li><a href="#">RESIZE</a></li>
+			</ul>
+		</li>
+		<li><a href="#">LINK LIST</a>
+		<ul>
+                <li><a href="#" onClick="menu()">INSERT</a></li>
+				<li><a href="#">DISPLAY</a></li>
+				<li><a href="#">DELETE</a></li>
+			</ul>
+		</li>
+	</ul>
+
+
+
+ <script>
+    var down = document.getElementById("menu_down");
+           
+    // Create a break line element
+    var br = document.createElement("br");
+    function menu() {
+               
+    // Create a form dynamically
+    var form = document.createElement("form");
+    form.setAttribute("method", "post");
+    form.setAttribute("action", "submit.php");
+ 
+    // Create an input element for Full Name
+    var FN = document.createElement("input");
+    FN.setAttribute("type", "text");
+    FN.setAttribute("name", "Enter input");
+    FN.setAttribute("placeholder", "Enter input");
+ 
+    // create a submit button
+    var s = document.createElement("input");
+    s.setAttribute("type", "submit");
+    s.setAttribute("value", "Submit");
+                 
+    // Append the full name input to the form
+    form.appendChild(FN);
+                              
+    // Append the submit button to the form
+    form.appendChild(s);
+ 
+    document.getElementsByTagName("body")[0]
+    .appendChild(form);
+            }
+        </script>
+    </body>
+</html>

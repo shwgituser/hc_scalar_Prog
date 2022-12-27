@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>DS Menu Driven Application</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	</head>
+<style type="text/css">
+*{
+	margin: 0;
+	padding: 0;
+}
+body{
+	background: white;
+	font-size: 16px;
+	font-family: sans-serif,arial;
+}
+ 
+.nav{
+	width: 1100px;
+	height: 60px;
+	margin: 0 auto;
+	border-radius: 5px;
+	
+}
+ul li{
+	list-style: none;
+	width: 200px;
+	line-height: 60px;
+	position: relative;
+	background: #222;
+	box-shadow: 0px 2px 5px 0px grey;
+	text-align: center;
+	float: left;
+	background-color: green;
+}
+ul li ul{
+	position: absolute;
+}
+.nav > ul > li:nth-of-type(1){
+	border-radius: 5px 0px 0px 5px;
+}
+.nav > ul > li:nth-of-type(5){
+	border-radius: 0px 5px 5px 0px;
+}
+ul li a{
+	color: #fff;
+	width: 200px;
+	height: 58px;
+	display: inline-block;
+	text-decoration: none;
+}
+ul li a:hover{
+	font-weight: bold;
+	border-bottom: 2px solid #fff;
+}
+ul li ul{
+	display: none;
+}
+.nav ul li:hover ul{
+	display: block;
+}
+.fa{
+	margin-right: 5px;
+}
+.container{
+	width: 1000px;
+	height: 200px;
+	margin: 0 auto;
+	padding:20px 20px;
+}
+@media screen and (max-width: 480px){
+	header{
+		width: 100%;
+	}
+	.nav{
+		display: none;
+		width: 100%;
+		height: auto;
+	}
+	ul li{
+		width: 100%;
+		float: none;
+	}
+	ul li a{
+		width: 100%;
+		display: block;
+	}
+	ul li ul{
+		position: static;
+	}
+	ul li ul li a{
+		background: #222;
+	}
+	.fa-list.modify{
+		display: block;
+	}
+	.container{
+		width: 100%;
+		height: auto;
+	}
+	body{
+		overflow-x:hidden;
+	}
+}
+</style>
+<body>
+ 
+	
+<div class="menu"></div>
+<nav class="nav">
+	<ul>
+		<li><a href="#">DATA STRUCTURES</a></li>
+		<li><a href="#">STACK</a>
+			<ul>
+				<li><a href="enter_data.html">PUSH</a></li>
+				<li><a href="#">POP</a></li>
+				<li><a href="#">PEAK</a></li>
+			</ul>
+		</li>
+		<li><a href="#">QUEUE</a>
+		<ul>
+                <li><a href="enter_data.html">ENQUEUE</a></li>
+				<li><a href="#">DEQUEUE</a></li>
+				<li><a href="#">PEAK</a></li>
+			</ul>
+		</li>
+		<li><a href="#">ARRAY</a>
+		<ul>
+                <li><a href="enter_data.html">INSERT</a></li>
+				<li><a href="#">DISPLAY</a></li>
+				<li><a href="enter_data.html">RESIZE</a></li>
+			</ul>
+		</li>
+		<li><a href="#">LINK LIST</a>
+		<ul>
+                <li><a href="enter_data.html">INSERT</a></li>
+				<li><a href="#">DISPLAY</a></li>
+				<li><a href="#">DELETE</a></li>
+			</ul>
+		</li>
+		</ul>
+
+
+<!-- <html>
+<head>
+        <title> DS Menu Driven Appl</title>
+	<style>	
+		*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body
+{
+	list-style: none;
+	height: 36px;
+	line-height:36px;
+	background-color: gray;
+	font-family: serif,sans-serif,cursive;
+	font-size: 13px;
+	
+}
+.menu-bar
+{
+	background: olive;
+	text-align: center;
+}
+
+.menu-bar ul
+{
+  display:inline-flex;
+  list-style: none;
+  color: white;	
+}
+
+.menu-bar ul li
+{
+	width: 120px;
+	margin:15px;
+	padding:15px;
+}
+.menu-bar ul li a
+{
+	text-decoration: none;
+	color: white;
+}
+active,.menu-bar ul li :hover 
+{
+	background: gray;
+	border-radius: 3px;
+}
+.menu-bar .fa
+{
+	margin-right: 8px;
+}
+sub-menu-1
+{
+	displat:none;
+}
+.menu-bar ul li:hover .sub-menu-1
+{
+	display:block;
+	position: absolute;
+	background:orange;
+	margin-top:15px;
+	margin-left:-15px;
+}
+.menu-bar ul li:hover .sub-menu-1 ul
+{
+	display:block;
+	margin: 10px;
+}
+.menu-bar ul li:hover .sub-menu-1 ul li 
+{
+	width: 150px;
+	padding: 10px;
+	border-bottom: ipx dotted white;
+	background: transparent;
+	border-radius:0;
+	text-align:left;
+}
+.menu-bar ul li:hover .sub-menu-1 ul li:last-child
+{
+	border-bottom: none;
+}	
+.menu-bar ul li:hover .sub-menu-1 ul li a:hover
+{
+	color: #b2ff00;
+}
+	</style>
+		
+        <!-- <link rel="stylesheet" type="text/css" href="style.css"> 
+		<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css">  -->
+<!-- </head>
+<body>
+      <div class="Data Structure Menu">
+      <ul>
+      <li class ="active"> <i  class="fa fa-home" aria-hidden="true"></i><a href="#">Data Structure Menu</a></li>
+	 
+      <li><a href="#"> <i  class="fa fa-home" aria-hidden="true"></i>ARRAY</a>
+	       <div class="sub-menu-1">
+		   <ul>
+		        <li><a href="#">INSERT </a></li>
+				<li><a href="#">DISPLAY </a></li>
+				<li><a href="#">RESIZE </a></li>
+		   
+		   </ul>
+	  </li>
+	  
+      <li><a href="#"> <i  class="fa fa-home" aria-hidden="true"></i>STACK</a>
+	   <div class="sub-menu-1">
+		   <ul>
+		        <li><a href="#">PUSH </a></li>
+				<li><a href="#">POP </a></li>
+				<li><a href="#">PEAK </a></li>
+		   
+		   </ul>
+	  </li>
+      <li><a href="#"> <i  class="fa fa-home" aria-hidden="true"></i>QUEUE</a>
+	  <div class="sub-menu-1">
+		   <ul>
+		        <li><a href="#">DEQUEUE </a></li>
+				<li><a href="#">ENQUEUE </a></li>
+				<li><a href="#">PEAK </a></li>
+		   
+		   </ul>
+		</li>
+      <li><a href="#"> <i  class="fa fa-home" aria-hidden="true"></i>LINK LIST</a>
+	   <div class="sub-menu-1">
+		   <ul>
+		        <li><a href="#">ADD</a></li>
+				<li><a href="#">DISPLAY </a></li>
+				
+		   
+		   </ul>
+		</li>
+      </ul>
+      </div>
+<!-- <h2>Hello World!</h2> -->
+</body>
+</html> 
